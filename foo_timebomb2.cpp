@@ -7,7 +7,7 @@ static constexpr const char* component_name = "Timebomb2";
 
 DECLARE_COMPONENT_VERSION(
 	component_name,
-	"1.1",
+	"1.2",
 	"grimes\n\n"
 	"Build: " __TIME__ ", " __DATE__
 );
@@ -172,25 +172,25 @@ public:
 	virtual void get_name(t_uint32 p_index, pfc::string_base& p_out)
 	{
 		if (p_index == 0)
-			p_out = "0.5h";
+			p_out = "15min";
 		if (p_index == 1)
-			p_out = "1h";
+			p_out = "30min";
 		if (p_index == 2)
-			p_out = "1.5h";
+			p_out = "1h";
 		if (p_index == 3)
-			p_out = "2h";
+			p_out = "1.5h";
 		if (p_index == 4)
-			p_out = "2.5h";
+			p_out = "2h";
 		if (p_index == 5)
-			p_out = "3h";
+			p_out = "2.5h";
 		if (p_index == 6)
-			p_out = "3.5h";
+			p_out = "3h";
 		if (p_index == 7)
-			p_out = "4h";
+			p_out = "3.5h";
 		if (p_index == 8)
-			p_out = "4.5h";
+			p_out = "4h";
 		if (p_index == 9)
-			p_out = "5h";
+			p_out = "4.5h";
 		if (p_index == 10)
 			p_out = "Custom";
 		if (p_index == 11)
