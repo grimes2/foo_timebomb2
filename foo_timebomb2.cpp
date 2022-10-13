@@ -7,7 +7,7 @@ static constexpr const char* component_name = "Timebomb2";
 
 DECLARE_COMPONENT_VERSION(
 	component_name,
-	"1.2",
+	"1.3",
 	"grimes\n\n"
 	"Build: " __TIME__ ", " __DATE__
 );
@@ -176,21 +176,21 @@ public:
 		if (p_index == 1)
 			p_out = "30min";
 		if (p_index == 2)
-			p_out = "1h";
+			p_out = "45min";
 		if (p_index == 3)
-			p_out = "1.5h";
+			p_out = "1h";
 		if (p_index == 4)
-			p_out = "2h";
+			p_out = "1.5h";
 		if (p_index == 5)
-			p_out = "2.5h";
+			p_out = "2h";
 		if (p_index == 6)
-			p_out = "3h";
+			p_out = "2.5h";
 		if (p_index == 7)
-			p_out = "3.5h";
+			p_out = "3h";
 		if (p_index == 8)
-			p_out = "4h";
+			p_out = "3.5h";
 		if (p_index == 9)
-			p_out = "4.5h";
+			p_out = "4h";
 		if (p_index == 10)
 			p_out = "Custom";
 		if (p_index == 11)
@@ -206,21 +206,21 @@ public:
 		else if (p_index == 1)
 			p_out = "Stop playback after 30min.";
 		else if (p_index == 2)
-			p_out = "Stop playback after 1h.";
+			p_out = "Stop playback after 45min.";
 		else if (p_index == 3)
-			p_out = "Stop playback after 1.5h.";
+			p_out = "Stop playback after 1h.";
 		else if (p_index == 4)
-			p_out = "Stop playback after 2h.";
+			p_out = "Stop playback after 1.5h.";
 		else if (p_index == 5)
-			p_out = "Stop playback after 2.5h.";
+			p_out = "Stop playback after 2h.";
 		else if (p_index == 6)
-			p_out = "Stop playback after 3h.";
+			p_out = "Stop playback after 2.5h.";
 		else if (p_index == 7)
-			p_out = "Stop playback after 3.5h.";
+			p_out = "Stop playback after 3h.";
 		else if (p_index == 8)
-			p_out = "Stop playback after 4h.";
+			p_out = "Stop playback after 3.5h.";
 		else if (p_index == 9)
-			p_out = "Stop playback after 4.5h.";
+			p_out = "Stop playback after 4h.";
 		else if (p_index == 10)
 			p_out = "Stop playback after custom minutes.";
 		else if (p_index == 11)
@@ -253,7 +253,6 @@ public:
 			cfg_menu_timebomb9_enabled = false;
 			cfg_menu_timebomb10_enabled = false;
 			cfg_menu_timebomb11_enabled = false;
-			timebomb2 = 30;
 		}
 		if (p_index == 1 && core_api::assert_main_thread())
 		{
@@ -268,7 +267,6 @@ public:
 			cfg_menu_timebomb9_enabled = false;
 			cfg_menu_timebomb10_enabled = false;
 			cfg_menu_timebomb11_enabled = false;
-			timebomb2 = 60;
 		}
 		if (p_index == 2 && core_api::assert_main_thread())
 		{
@@ -283,7 +281,6 @@ public:
 			cfg_menu_timebomb9_enabled = false;
 			cfg_menu_timebomb10_enabled = false;
 			cfg_menu_timebomb11_enabled = false;
-			timebomb2 = 90;
 		}
 		if (p_index == 3 && core_api::assert_main_thread())
 		{
@@ -298,7 +295,6 @@ public:
 			cfg_menu_timebomb9_enabled = false;
 			cfg_menu_timebomb10_enabled = false;
 			cfg_menu_timebomb11_enabled = false;
-			timebomb2 = 120;
 		}
 		if (p_index == 4 && core_api::assert_main_thread())
 		{
@@ -313,7 +309,6 @@ public:
 			cfg_menu_timebomb9_enabled = false;
 			cfg_menu_timebomb10_enabled = false;
 			cfg_menu_timebomb11_enabled = false;
-			timebomb2 = 150;
 		}
 		if (p_index == 5 && core_api::assert_main_thread())
 		{
@@ -328,7 +323,6 @@ public:
 			cfg_menu_timebomb9_enabled = false;
 			cfg_menu_timebomb10_enabled = false;
 			cfg_menu_timebomb11_enabled = false;
-			timebomb2 = 180;
 		}
 		if (p_index == 6 && core_api::assert_main_thread())
 		{
@@ -343,7 +337,6 @@ public:
 			cfg_menu_timebomb9_enabled = false;
 			cfg_menu_timebomb10_enabled = false;
 			cfg_menu_timebomb11_enabled = false;
-			timebomb2 = 210;
 		}
 		if (p_index == 7 && core_api::assert_main_thread())
 		{
@@ -358,7 +351,6 @@ public:
 			cfg_menu_timebomb9_enabled = false;
 			cfg_menu_timebomb10_enabled = false;
 			cfg_menu_timebomb11_enabled = false;
-			timebomb2 = 240;
 		}
 		if (p_index == 8 && core_api::assert_main_thread())
 		{
@@ -373,7 +365,6 @@ public:
 			cfg_menu_timebomb8_enabled = false;
 			cfg_menu_timebomb10_enabled = false;
 			cfg_menu_timebomb11_enabled = false;
-			timebomb2 = 270;
 		}
 		if (p_index == 9 && core_api::assert_main_thread())
 		{
@@ -388,7 +379,6 @@ public:
 			cfg_menu_timebomb8_enabled = false;
 			cfg_menu_timebomb9_enabled = false;
 			cfg_menu_timebomb11_enabled = false;
-			timebomb2 = 300;
 		}
 		if (p_index == 10 && core_api::assert_main_thread())
 		{
@@ -403,8 +393,6 @@ public:
 			cfg_menu_timebomb8_enabled = false;
 			cfg_menu_timebomb9_enabled = false;
 			cfg_menu_timebomb10_enabled = false;
-			cfg_timebomb.get(timebomb);
-			timebomb2 = atoi(timebomb);
 		}
 		if (p_index == 11 && core_api::assert_main_thread())
 		{
@@ -421,35 +409,35 @@ public:
 				}
 				else if (cfg_menu_timebomb3_enabled)
 				{
-					timebomb2 = 60;
+					timebomb2 = 45;
 				}
 				else if (cfg_menu_timebomb4_enabled)
 				{
-					timebomb2 = 90;
+					timebomb2 = 60;
 				}
 				else if (cfg_menu_timebomb5_enabled)
 				{
-					timebomb2 = 120;
+					timebomb2 = 90;
 				}
 				else if (cfg_menu_timebomb6_enabled)
 				{
-					timebomb2 = 150;
+					timebomb2 = 120;
 				}
 				else if (cfg_menu_timebomb7_enabled)
 				{
-					timebomb2 = 180;
+					timebomb2 = 150;
 				}
 				else if (cfg_menu_timebomb8_enabled)
 				{
-					timebomb2 = 210;
+					timebomb2 = 180;
 				}
 				else if (cfg_menu_timebomb9_enabled)
 				{
-					timebomb2 = 240;
+					timebomb2 = 210;
 				}
 				else if (cfg_menu_timebomb10_enabled)
 				{
-					timebomb2 = 270;
+					timebomb2 = 240;
 				}
 				else if (cfg_menu_timebomb11_enabled)
 				{
