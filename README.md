@@ -1,5 +1,5 @@
 # foo_timebomb2
-For foobar2000 v2: Stop playing after predefined time.
+For `foobar2000` `v2` and newer: Stop playing after predefined time.
 
 # Building from source
 Requirements:
