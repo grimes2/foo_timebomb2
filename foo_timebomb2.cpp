@@ -25,10 +25,10 @@ static const GUID guid_cfg_menu_timebomb_enabled = { 0x1094d78b, 0x67d9, 0x4d99,
 cfg_bool cfg_menu_timebomb_enabled(guid_cfg_menu_timebomb_enabled, false);
 
 VOID CALLBACK TimebombTimer(
-	HWND hwnd,        // handle to window for timer messages
-	UINT message,     // WM_TIMER message
+	HWND,        // handle to window for timer messages
+	UINT,     // WM_TIMER message
 	UINT idEvent1,     // timer identifier
-	DWORD dwTime)     // current system time
+	DWORD)     // current system time
 {
 	if (cfg_menu_timebomb_enabled)
 	{
@@ -480,7 +480,7 @@ public:
 
 	virtual t_uint32 get_sort_priority()
 	{
-		return sort_priority_base;
+		return 0x80000000;
 	}
 
 private:
