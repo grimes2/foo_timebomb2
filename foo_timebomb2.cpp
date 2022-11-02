@@ -7,7 +7,7 @@ static constexpr const char* component_name = "Timebomb2";
 
 DECLARE_COMPONENT_VERSION(
 	component_name,
-	"1.5",
+	"1.6",
 	"grimes\n\n"
 	"Build: " __TIME__ ", " __DATE__
 );
