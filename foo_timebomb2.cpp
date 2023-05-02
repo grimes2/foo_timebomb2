@@ -14,7 +14,7 @@ DECLARE_COMPONENT_VERSION(
 
 VALIDATE_COMPONENT_FILENAME("foo_timebomb2.dll");
 
-#define ID_TIMER2 1001
+constexpr auto ID_TIMER2 = 1001;
 
 UINT_PTR ptr8 = 0;
 pfc::string8 timebomb;
